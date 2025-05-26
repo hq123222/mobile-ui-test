@@ -1,0 +1,369 @@
+/* QQ应用样式 */
+
+/* QQ对话框样式 */
+#chat_history_dialog {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    width: 90vw !important;
+    height: 90vh !important;background: none !important;
+}
+
+/* QQ联系人包装容器样式 */
+.qq-contact-wrapper {
+    padding: 15px;
+    margin: 5px 0;
+    background: #f5f5f5;
+    border-radius: 12px;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.qq-contact-wrapper:hover {
+    background-color: #e8f5e8 !important;
+}
+
+/* QQ群包装容器样式 */
+.qq-group-wrapper {
+    padding: 15px;
+    margin: 5px 0;
+    background: #f5f5f5;
+    border-radius: 12px;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.qq-group-wrapper:hover {
+    background-color: #e8f5e8 !important;
+}
+
+/* 聊天页面样式 */
+.chat-page {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: white !important;
+    z-index: 10001 !important;
+    display: none;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.chat-page.show {
+    display: flex !important;
+}
+
+/* 聊天头部样式 */
+.chat-header {
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.chat-header.group {
+    background: #eaefff;
+    border: 1px solid #ccc;
+}
+
+.chat-header.contact {
+    background: #eaefff;
+    border: 1px solid #ccc;
+}
+
+.back-btn {
+    background: none !important;
+    border: none !important;
+    color: #333 !important;
+    font-size: 18px !important;
+    margin-right: 15px !important;
+    cursor: pointer !important;
+    padding: 5px !important;
+    border-radius: 50% !important;
+    transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: rgba(255,255,255,0.1) !important;
+}
+
+.chat-title {
+    flex: 1;color: #333;text-shadow: none;
+}
+
+/* 聊天消息区域样式 */
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #eaefff;
+    height: calc(100vh - 120px);
+}
+
+/* 消息输入区域样式 */
+.chat-input-area {
+    padding: 15px;
+    background: #f8f8f8;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.message-input {
+    flex: 1 !important;
+    padding: 10px 15px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 20px !important;
+    margin-right: 10px !important;
+    outline: none !important;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.message-input:focus {
+    border-color: #4CAF50 !important;
+    box-shadow: 0 0 0 2px rgba(76,175,80,0.2) !important;
+}
+
+.send-btn {
+    background: #4CAF50 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 16px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.send-btn.group {
+    background: #FF9800 !important;
+}
+
+.send-btn.contact {
+    background: #4CAF50 !important;
+}
+
+.send-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.send-btn:active {
+    transform: scale(0.95);
+}
+
+/* 联系人和群组信息显示样式 */
+.contact-summary,
+.group-summary {
+    pointer-events: none;
+}
+
+.contact-header,
+.group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+/* 头像容器样式 */
+.contact-avatar-wrapper {
+    margin-right: 12px;
+    pointer-events: auto; /* 允许头像接收点击事件 */
+}
+
+.custom-avatar {
+    border: 2px solid #ddd;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.custom-avatar:hover {
+    transform: scale(1.05);
+    border-color: #4CAF50 !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.contact-info,
+.group-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.contact-name,
+.group-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+.contact-number,
+.group-id {
+    color: #666;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.contact-time,
+.group-time {
+    color: #999;
+    font-size: 12px;
+}
+
+.last-message {
+    color: #888;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 原有QQ联系人样式保持兼容 */
+.custom-qqhao {
+    display: block;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+
+/* .custom-qqhao.sel 选中状态样式已移除 */
+
+/* 原有QQ群组样式保持兼容 */
+.custom-qq-qun {
+    display: block;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+
+/* .custom-qq-qun.sel 选中状态样式已移除 */
+
+/* 消息容器样式 */
+.custom-qq-cont,
+.custom-qun-cont {
+    display: block;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+/* 消息样式 */
+.custom-message {
+    margin: 8px 0;
+    clear: both;
+}
+
+.custom-message.custom-sent {
+    text-align: right;
+}
+
+.custom-message.custom-received {
+    text-align: left;
+}
+
+.custom-message div {
+    display: inline-block;
+    padding: 4px 6px;
+    border-radius: 15px;
+    word-wrap: break-word;
+}
+
+.custom-sent div {
+    background: #007bff;
+    color: white;
+}
+
+.custom-received div {
+    background: #fff;
+    color: #333;
+}
+
+/* 群聊消息项样式 - 改为气泡框样式 */
+.custom-qun-cont-item {
+    margin: 8px 0;
+    clear: both;
+    text-align: left;
+}
+
+.custom-qun-cont-item .sender-name {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 15px;
+    display: block;
+}
+
+.custom-qun-cont-item .message-content {
+    display: inline-block;
+    background: #fff;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.custom-qun-cont-item .message-time {
+    font-size: 10px;
+    opacity: 0.7;
+    color: #999;
+    display: block;
+}
+
+/* 按钮容器样式 */
+.btn-cont {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* 好感度显示样式 */
+.hgd-show {
+    color: #666;
+    font-size: 14px;
+}
+
+/* 强制移除所有选中相关的内联样式 */
+.custom-qqhao,
+.custom-qq-qun {
+    background: transparent !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    box-shadow: none !important;
+    color: inherit !important;
+}
+
+/* 消息时间样式 */
+.message-time {
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+/* 群聊消息发送者名称样式 */
+.sender-name {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* 群聊消息内容样式 */
+.message-content {
+    color: #333;
+} 
